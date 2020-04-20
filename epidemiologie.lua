@@ -23,6 +23,9 @@ local epi={
 				until false
 			end)
 		end,
-	}
+	},
+	R₀=function(durchseuchung) return 1/(1-durchseuchung) end,
+	Rq=function(R₀,q) return R₀*(1-q) end, 
+	durchseuchung=function(R₀) return 1-(1/R₀) end,
 }
 return epi
